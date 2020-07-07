@@ -2,11 +2,41 @@
 
 
 
-@{
-    ViewBag.Title = "Build your own pizza";
-}
+    @{
+        ViewBag.Title = "Build your own pizza";
+    }
 
-<h2>Index</h2>
+    <link rel="stylesheet" href="~/Content/jquery.steps.css" />
+    <h2>Build your own pizza</h2>
 
-<script src="~/Scripts/jquery.steps.js"></script>
+    <div id="example-basic">
+        <h3>Choose the size</h3>
+        <section>
+            <p>Size</p>
+        </section>
+        <h3>Choose the cheese</h3>
+        <section>
+            <p>Cheese</p>
+        </section>
+        <h3>Choose the sauce</h3>
+        <section>
+            <p>Sauce</p>
+        </section>
+        <h3>Choose the ingredients</h3>
+        <section>
+            <p>Ingredients</p>
+        </section>
+    </div>
 
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.steps.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $("#example-basic").steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "slideLeft",
+            autoFocus: true
+        });
+    </script>
